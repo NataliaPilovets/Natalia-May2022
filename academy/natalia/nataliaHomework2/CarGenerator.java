@@ -1,4 +1,7 @@
-package com.nataliaHomework2;
+package com.academy.natalia.nataliaHomework2;
+
+import com.academy.natalia.nataliaHomework2.Car;
+import com.academy.natalia.nataliaHomework2.ModelStorage;
 
 import java.util.Random;
 
@@ -14,7 +17,7 @@ int anyValue = array[new Random().nextInt(array.length)];
 
  */
 
-public class CarGenerator implements ModelStorage{
+public class CarGenerator implements ModelStorage {
     public static Car[]  CarGeneration(int carsToGenerate)  {
         Car[] cars = new Car[carsToGenerate];
         String[] carGenerationArray = modelArray;

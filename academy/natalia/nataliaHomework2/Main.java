@@ -1,10 +1,6 @@
-package com.nataliaHomework2;
+package com.academy.natalia.nataliaHomework2;
 
 import java.util.Arrays;
-
-/*Метод Arrays.sort() позволяет сортировать элементы массива по возрастанию
-* Обратите внимание, что мы можем использовать Arrays.sort(T[] tArr) только если тип массива реализует интерфейс Comparable.
-*  Comparable<Car> */
 
 public class Main {
     public static void main(String[] args) {

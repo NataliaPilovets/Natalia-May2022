@@ -1,7 +1,9 @@
-package com.nataliaHomework2;
+package com.academy.natalia.nataliaHomework2;
 
 
-    public class Car implements CarMovement, Comparable<Car> {
+import java.util.Objects;
+
+public class Car implements CarMovement, Comparable<Car> {
         private int doors;
         private int numberOfHeadlights;
         private double gasTankVolume;
@@ -76,21 +78,31 @@ package com.nataliaHomework2;
             this.carModel = carModel;
         }
 
-        @Override
-        public void run() {
-            System.out.println("the car is coming");
-        }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return doors == car.doors && numberOfHeadlights == car.numberOfHeadlights && Double.compare(car.gasTankVolume, gasTankVolume) == 0 && Double.compare(car.engineVolume, engineVolume) == 0 && carBrand.equals(car.carBrand) && carModel.equals(car.carModel);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(doors, numberOfHeadlights, gasTankVolume, engineVolume, carBrand, carModel);
+    }
 
-        @Override
-        public int move() {
-            return 10;
-        }
-
-        @Override
+    @Override
         public String toString() {
             return "Display Generated Car" + '\'' + carBrand + '\'' +  carModel + '\'' + "Number of doors=" + doors + ", numberOfHeadlights=" + numberOfHeadlights + ", gasTankVolume=" + gasTankVolume +
                     ", engineVolume=" + engineVolume + ", carBrand='" + carBrand + '\'' + ", carModel='" + carModel + '\'';
         }
+
+    public void run() {
+        System.out.println("the car is coming");
+    }
+
+    public int move() {
+        return 0;
+    }
     }
 

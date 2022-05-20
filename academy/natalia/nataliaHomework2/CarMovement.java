@@ -1,4 +1,4 @@
-package com.nataliaHomework2;
+package com.academy.natalia.nataliaHomework2;
 
 public interface CarMovement  {
     void run();
